@@ -1308,7 +1308,7 @@
             </div>
             <div class="support-copy">
               <h3>Inflammation Support</h3>
-              <p>शरीर की सामान्य प्रक्रियाओं को support करने के लिए।</p>
+              <p>गांठ से जुड़ी wellness concerns में शरीर की प्राकृतिक प्रक्रियाओं को support करने के लिए।</p>
             </div>
           </article>
           <article class="support-card">
@@ -1319,7 +1319,7 @@
             </div>
             <div class="support-copy">
               <h3>Comfort Support</h3>
-              <p>Daily comfort और routine का साथ देने के लिए।</p>
+              <p>गांठ से जुड़ी असहजता में daily comfort और routine को support करने के लिए।</p>
             </div>
           </article>
           <article class="support-card">
@@ -1341,7 +1341,7 @@
             </div>
             <div class="support-copy">
               <h3>Immunity Support</h3>
-              <p>Overall wellness routine का हिस्सा।</p>
+              <p>GathHeal को अपनी daily wellness routine में शामिल करके immunity और overall wellness को support किया।</p>
             </div>
           </article>
         </div>
@@ -1531,7 +1531,7 @@
               <div><h3 id="review-amit">अमित शर्मा</h3><p class="customer-city">जयपुर</p></div>
             </header>
             <div class="customer-rating" role="img" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote><p>“मैंने GathHeal को 15 दिनों तक अपनी daily routine में शामिल किया। और routine follow किया । लगभग 1 महीने के नियमित उपयोग के बाद मुझे अपने overall comfort और wellness में बेहतर support महसूस हुआ।”</p></blockquote>
+            <blockquote><p>“मैंने GathHeal को 15 दिनों तक अपनी daily routine में शामिल किया। और routine follow किया । लगभग 1 महीने के नियमित उपयोग के बाद मुझे बेहतर support महसूस हुआ।”</p></blockquote>
           </article>
           <article class="customer-review" aria-labelledby="review-pooja">
             <header class="customer-review-header">
@@ -1553,7 +1553,7 @@
               <div><h3 id="review-rahul">राहुल मेहता</h3><p class="customer-city">अहमदाबाद</p></div>
             </header>
             <div class="customer-rating" role="img" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote><p>“नियमित सेवन और balanced lifestyle के साथ रोज़मर्रा के कामों में comfort महसूस हुआ। Product की packaging सुरक्षित थी और delivery समय पर मिली।”</p></blockquote>
+            <blockquote><p>“GathHeal का नियमित सेवन और balanced lifestyle अपनाने के साथ रोज़मर्रा के कामों में comfort महसूस हुआ। Product की packaging सुरक्षित थी और delivery समय पर मिली।”</p></blockquote>
           </article>
         </div>
       </section>
@@ -1570,19 +1570,18 @@
           <details>
             <summary>क्या यह हर तरह की गांठ के लिए है?</summary>
             <p>
-              नहीं। गांठ के कारण अलग हो सकते हैं। चिकित्सकीय जाँच ज़रूरी है।
+             गांठ के कारण अलग-अलग हो सकते हैं, इसलिए डॉक्टर से गांठ का चिकित्सकीय मूल्यांकन कराना आवश्यक है।
             </p>
           </details>
           <details>
             <summary>इसे कैसे लें?</summary>
             <p>
-              Product label या qualified healthcare professional की सलाह के
-              अनुसार।
+              GathHeal का सेवन product label और गांठ से संबंधित qualified doctor की सलाह के अनुसार करें।
             </p>
           </details>
           <details>
             <summary>क्या COD उपलब्ध है?</summary>
-            <p>जहाँ सेवा उपलब्ध हो, वहाँ COD मिल सकता है।</p>
+            <p>हाँ, Cash on Delivery (COD) सुविधा उपलब्ध है।</p>
           </details>
         </div>
       </section>
@@ -1629,6 +1628,20 @@
         if (!gallery || !controls) return;
         const cards = [...gallery.querySelectorAll('.certificate-card')];
         const dots = [...controls.querySelectorAll('.certificate-dot')];
+        // Matching cards on both sides let the last card slide forward into the first.
+        function cloneCard(card) {
+          const clone = card.cloneNode(true);
+          clone.setAttribute('aria-hidden', 'true');
+          clone.inert = true;
+          clone.removeAttribute('id');
+          clone.querySelectorAll('[id]').forEach((element) => element.removeAttribute('id'));
+          return clone;
+        }
+        const before = cards.map(cloneCard);
+        const after = cards.map(cloneCard);
+        gallery.prepend(...before);
+        gallery.append(...after);
+        const slides = [...before, ...cards, ...after];
         const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
         let active = 0, timer = 0, frame = 0, animation = 0;
         let touching = false;
@@ -1637,21 +1650,34 @@
 
         function mark(index) {
           active = index;
-          cards.forEach((card, i) => card.classList.toggle('is-active', i === index));
+          slides.forEach((card, i) => card.classList.toggle('is-active', i % cards.length === index));
           dots.forEach((dot, i) => dot.setAttribute('aria-current', String(i === index)));
         }
         function move(index, instant = false) {
           cancelAnimationFrame(animation);
           animation = 0;
+          const physicalIndex = instant ? cards.length + ((index + cards.length) % cards.length)
+            : index >= cards.length ? 2 * cards.length
+            : index < 0 ? cards.length - 1 : cards.length + index;
           index = (index + cards.length) % cards.length;
-          const card = cards[index];
+          const card = slides[physicalIndex];
           const cardRect = card.getBoundingClientRect();
           const galleryRect = gallery.getBoundingClientRect();
           const from = gallery.scrollLeft;
           const to = from + cardRect.left + cardRect.width / 2 - galleryRect.left - gallery.clientWidth / 2;
           mark(index);
+          function finish() {
+            // Reset to the identical middle copy with no animation or visible reverse travel.
+            if (physicalIndex < cards.length || physicalIndex >= 2 * cards.length) {
+              const original = cards[index].getBoundingClientRect();
+              const duplicate = card.getBoundingClientRect();
+              gallery.scrollLeft += original.left - duplicate.left;
+            }
+            animation = 0;
+          }
           if (instant || reducedMotion.matches) {
             gallery.scrollLeft = to;
+            finish();
             return;
           }
           const started = performance.now();
@@ -1660,7 +1686,7 @@
             const eased = progress < .5 ? 4 * progress ** 3 : 1 - (-2 * progress + 2) ** 3 / 2;
             gallery.scrollLeft = from + (to - from) * eased;
             if (progress < 1) animation = requestAnimationFrame(slide);
-            else animation = 0;
+            else finish();
           }
           animation = requestAnimationFrame(slide);
         }
@@ -1682,12 +1708,15 @@
             const rect = gallery.getBoundingClientRect();
             const center = rect.left + gallery.clientWidth / 2;
             let closest = 0, distance = Infinity;
-            cards.forEach((card, i) => {
+            slides.forEach((card, i) => {
               const box = card.getBoundingClientRect();
               const delta = Math.abs(box.left + box.width / 2 - center);
               if (delta < distance) { distance = delta; closest = i; }
             });
-            mark(closest);
+            mark(closest % cards.length);
+            if (closest < cards.length || closest >= 2 * cards.length) {
+              gallery.scrollLeft += cards[active].getBoundingClientRect().left - slides[closest].getBoundingClientRect().left;
+            }
           });
         }, { passive: true });
         gallery.addEventListener('keydown', (event) => {
