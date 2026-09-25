@@ -660,6 +660,61 @@
         margin-top: 25px;
         font-size: 24px;
       }
+      .final-cta-showcase {
+        position: relative;
+        isolation: isolate;
+        width: min(100%, 280px);
+        margin: 26px auto 22px;
+      }
+      .final-cta-showcase::before {
+        content: "";
+        position: absolute;
+        inset: 15% 5% 0;
+        z-index: -1;
+        background: radial-gradient(ellipse, #a331cc38, transparent 70%);
+      }
+      .final-cta-product {
+        display: block;
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0 14px 18px #0006);
+        animation: capsule-float 4s ease-in-out infinite;
+      }
+      .discount-sticker {
+        position: absolute;
+        top: 8px;
+        right: 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 84px;
+        height: 84px;
+        border: 3px solid #fff0b3;
+        border-radius: 50%;
+        background: linear-gradient(145deg, #fff3ad, #ffc849 55%, #f39a21);
+        color: #501b13;
+        box-shadow: 0 0 0 4px #fbbf2433, 0 8px 20px #0006;
+        transform: rotate(12deg);
+        animation: discount-pulse 3s ease-in-out infinite;
+      }
+      .discount-sticker::before {
+        content: "";
+        position: absolute;
+        inset: 4px;
+        border: 1px dashed #8a431b80;
+        border-radius: inherit;
+      }
+      .discount-sticker strong { font-size: 27px; line-height: 1.1; font-weight: 900; }
+      .discount-sticker span { font-size: 13px; line-height: 1.4; font-weight: 800; letter-spacing: 2px; }
+      @keyframes discount-pulse {
+        0%, 100% { transform: rotate(12deg) scale(1); }
+        50% { transform: rotate(8deg) scale(1.06); }
+      }
+      @keyframes capsule-float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
       .final-cta small {
         color: var(--muted);
       }
@@ -1427,10 +1482,13 @@
         </div>
       </section>
       <section class="final-cta">
-        <div class="eyebrow">अगला कदम</div>
         <h2>
-          गांठ में बदलाव हो तो<br /><span class="accent">पहले जाँच कराएँ</span>
+          <span class="accent">गांठ में बदलाव हो तो</span>
         </h2>
+        <div class="final-cta-showcase">
+          <img class="final-cta-product" src="images/capsuleproduct.png" alt="GathHeal Capsules product bottle" width="1254" height="1254" loading="lazy" decoding="async" />
+          <div class="discount-sticker" aria-label="10% off"><strong>10%</strong><span>OFF</span></div>
+        </div>
         <p class="intro">
           सही जानकारी और qualified healthcare professional की सलाह से अगला कदम
           तय करें।
