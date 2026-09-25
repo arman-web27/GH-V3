@@ -1,0 +1,1973 @@
+<!doctype html>
+<html lang="hi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#080808" />
+    <title>GathHeal Capsules — Ayurvedic Herbal Wellness Support</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Halant:wght@400;600;700&family=Hind:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+    <style>
+      :root {
+        --red: #ff454b;
+        --muted: #b5b5bb;
+        --line: #2b2b2f;
+        --green: #171717;
+        --leaf: #bf3036;
+        --w: 560px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 20px;
+      }
+      body {
+        background: #000;
+        color: #f8f8fa;
+        font-family: Hind, sans-serif;
+        font-size: 17px;
+        line-height: 1.65;
+      }
+      button,
+      input {
+        font: inherit;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      button,
+      a,
+      input {
+        -webkit-tap-highlight-color: transparent;
+      }
+      button {
+        cursor: pointer;
+      }
+      a:focus-visible,
+      button:focus-visible,
+      summary:focus-visible {
+        outline: 2px solid var(--red);
+        outline-offset: 5px;
+      }
+      .page {
+        max-width: var(--w);
+        margin: auto;
+        background: #080808;
+        padding-bottom: 85px;
+        overflow: hidden;
+        border-inline: 1px solid #202024;
+      }
+      section {
+        padding: 38px 25px;
+        border-bottom: 1px solid #222226;
+      }
+      h1,
+      h2,
+      h3 {
+        line-height: 1.35;
+        font-weight: 700;
+      }
+      h1,
+      h2 {
+        font-size: 31px;
+        letter-spacing: -0.5px;
+      }
+      h3 {
+        font-size: 19px;
+      }
+      p {
+        color: var(--muted);
+      }
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        color: var(--red);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+      .eyebrow:before {
+        content: "";
+        width: 22px;
+        height: 2px;
+        background: var(--red);
+      }
+      .accent {
+        color: var(--red);
+      }
+      .intro {
+        margin-top: 14px;
+      }
+      .banner {
+        padding: 0;
+        border: 0;
+      }
+      .banner img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 24px;
+      }
+      .tile {
+        padding: 20px 15px;
+        background: #131315;
+        border: 1px solid var(--line);
+        border-radius: 15px;
+      }
+      .tile i {
+        display: grid;
+        place-items: center;
+        width: 38px;
+        height: 38px;
+        background: #301518;
+        border-radius: 11px;
+        color: var(--red);
+        font-size: 20px;
+        margin-bottom: 16px;
+      }
+      .tile h3 {
+        font-size: 18px;
+      }
+      .note {
+        margin-top: 22px;
+        border-left: 3px solid var(--red);
+        background: #181113;
+        padding: 15px 17px;
+        border-radius: 0 12px 12px 0;
+        font-size: 15px;
+      }
+      .note strong {
+        display: block;
+        color: #fff;
+        margin-top: 4px;
+      }
+      .product {
+        background: radial-gradient(ellipse at 50% 35%, #291013, transparent 65%), #09090b;
+      }
+      #product-intro { padding-block: 36px; }
+      #product-intro h2 { font-size: clamp(32px, 9vw, 40px); }
+      .product-subtitle { margin-top: 10px; color: #bcb4b6; font-size: 16px; }
+      .product-showcase {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        margin: 24px 0;
+        padding: 18px;
+        border: 1px solid #543035;
+        border-radius: 20px;
+        background: radial-gradient(ellipse at 50% 45%, #502129 0, #211216 45%, #101013 78%);
+        color: #f7eeee;
+        box-shadow: inset 0 1px 0 #ffffff0a, 0 18px 40px #0005;
+      }
+      .product-showcase::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 76%;
+        aspect-ratio: 1;
+        top: 44%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid #ff727a25;
+        border-radius: 50%;
+        box-shadow: 0 0 0 22px #ff454b05, 0 0 55px #ff454b0c;
+      }
+      .product-showcase::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 20%;
+        right: 20%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #ff7b83, transparent);
+      }
+      .product-showcase-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 10px;
+        border: 1px solid #ff7b8330;
+        border-radius: 100px;
+        background: #170e12cc;
+        color: #f1b3b8;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+      .product-image-slot {
+        position: relative;
+        height: clamp(240px, 72vw, 300px);
+        margin: 18px 0 22px;
+      }
+      .product-image-slot::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 15%;
+        width: 70%;
+        height: 16px;
+        border-radius: 50%;
+        background: #ff454b38;
+        filter: blur(14px);
+      }
+      .product-image-slot img {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 12px;
+        filter: drop-shadow(0 18px 16px #0007);
+      }
+      .product-showcase figcaption {
+        text-align: center;
+        padding-top: 18px;
+        border-top: 1px solid #ffffff12;
+      }
+      .product-showcase figcaption strong {
+        display: block;
+        color: #fff;
+        font-size: 30px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+      }
+      .product-showcase figcaption strong span { color: #ff5964; }
+      .product-showcase figcaption small {
+        font-size: 11px;
+        letter-spacing: 2px;
+        color: #bca5ab;
+      }
+      .product-description { font-size: 16px; line-height: 1.8; color: #c4bec1; }
+      .product-features {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0;
+        list-style: none;
+        margin-top: 20px;
+        padding: 18px 0;
+        border-block: 1px solid #ffffff12;
+      }
+      .product-features li {
+        padding: 0 7px;
+        text-align: center;
+        font-size: 13px;
+        line-height: 1.5;
+        color: #dfd4d5;
+      }
+      .product-features li + li { border-left: 1px solid #ffffff12; }
+      .product-features i {
+        display: grid;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        margin: 0 auto 10px;
+        border: 1px solid #ff454b25;
+        border-radius: 12px;
+        background: #ff454b0d;
+        font-size: 23px;
+        color: #ff838c;
+      }
+      #product-intro .cta { margin-top: 22px; }
+      .checklist {
+        list-style: none;
+        margin-top: 22px;
+        display: grid;
+        gap: 10px;
+      }
+      .checklist li:before {
+        content: "✓";
+        color: var(--red);
+        margin-right: 12px;
+      }
+      .cta,
+      .submit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        background: #db242d;
+        color: white;
+        font-weight: 700;
+        border: 1px solid #fa4b52;
+        border-radius: 10px;
+        padding: 14px 20px;
+        margin-top: 24px;
+        min-height: 52px;
+      }
+      .cta:hover,
+      .submit:hover {
+        background: #bd1c25;
+      }
+      .steps {
+        margin-top: 25px;
+      }
+      .step {
+        display: flex;
+        gap: 18px;
+        padding: 21px 0;
+        border-top: 1px solid var(--line);
+      }
+      .number {
+        font-size: 28px;
+        line-height: 1.2;
+        color: var(--red);
+        font-weight: 600;
+      }
+      .step p {
+        font-size: 16px;
+        margin-top: 5px;
+      }
+      #how-it-works {
+        padding-block: 34px;
+        background: linear-gradient(180deg, #0c0b0e, #100c0e);
+      }
+      .support-grid {
+        display: grid;
+        gap: 18px;
+        margin-top: 24px;
+      }
+      .support-card {
+        position: relative;
+        isolation: isolate;
+        display: grid;
+        grid-template-columns: 38% minmax(0, 1fr);
+        align-items: center;
+        min-width: 0;
+        padding-left: 10px;
+        filter: drop-shadow(0 8px 12px #0004);
+      }
+      /* The dark curl sits behind the pointed image ribbon. */
+      .support-card::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 28px;
+        height: calc(100% - 24px);
+        border-radius: 20px 0 0 5px;
+        background: linear-gradient(90deg, #25161a, #48232b);
+      }
+      .support-image {
+        position: relative;
+        z-index: 1;
+        align-self: center;
+        height: 140px;
+        padding: 0;
+        overflow: hidden;
+        border-radius: 13px 13px 0 0;
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), 50% 100%, 0 calc(100% - 20px));
+        background: linear-gradient(145deg, #30232a, #19171c 65%, #24171d);
+        box-shadow: inset 0 1px 0 #ffffff16;
+      }
+      .support-photo {
+        position: relative;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        border-radius: 0;
+        background: transparent;
+      }
+      .support-photo img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .support-copy {
+        position: relative;
+        min-width: 0;
+        margin-block: 10px 24px;
+        padding: 12px 15px 12px 12px;
+        border-block: 1px solid #39252c;
+        background: linear-gradient(90deg, #21171c, #141216);
+      }
+      .support-copy::after {
+        content: '';
+        position: absolute;
+        inset: -1px 0 -1px auto;
+        width: 4px;
+        border-radius: 3px;
+        background: linear-gradient(#d44a57, #7b2735);
+      }
+      .support-card:nth-child(even) {
+        grid-template-columns: minmax(0, 1fr) 38%;
+        padding-left: 0;
+        padding-right: 10px;
+      }
+      .support-card:nth-child(even)::before {
+        left: auto;
+        right: 0;
+        border-radius: 0 20px 5px 0;
+        background: linear-gradient(90deg, #48232b, #25161a);
+      }
+      .support-card:nth-child(even) .support-image { grid-column: 2; grid-row: 1; }
+      .support-card:nth-child(even) .support-copy {
+        grid-column: 1;
+        grid-row: 1;
+        padding: 12px 12px 12px 15px;
+        text-align: right;
+        background: linear-gradient(90deg, #141216, #21171c);
+      }
+      .support-card:nth-child(even) .support-copy::after { left: 0; right: auto; }
+      .support-card h3 { font-size: 18px; line-height: 1.3; overflow-wrap: anywhere; color: #fff4f5; }
+      .support-card p { margin-top: 7px; font-size: 14px; line-height: 1.55; color: #bcb5bb; }
+      #how-it-works > .fine {
+        margin-top: 24px;
+        padding-left: 12px;
+        border-left: 2px solid #75313c;
+        font-size: 13px;
+      }
+      @media (max-width: 360px) {
+        .support-grid { gap: 16px; }
+        .support-image { height: 130px; }
+        .support-copy { padding: 12px 13px 12px 10px; }
+        .support-card:nth-child(even) .support-copy { padding: 12px 10px 12px 13px; }
+        .support-card h3 { font-size: 16px; }
+        .support-card p { font-size: 13px; }
+      }
+      .fine {
+        font-size: 14px;
+        color: #b4a7a9;
+      }
+      .guidance-icon {
+        width: 54px;
+        height: 54px;
+        display: grid;
+        place-items: center;
+        border: 1px solid #6b292d;
+        border-radius: 50%;
+        color: var(--red);
+        font-size: 27px;
+        margin-bottom: 20px;
+      }
+      #ingredients {
+        padding-block: 32px;
+        background: radial-gradient(ellipse at 100% 0, #251317, transparent 60%), #0b0b0d;
+      }
+      .ingredient-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px 14px;
+        margin-top: 26px;
+      }
+      .herb {
+        min-width: 0;
+        padding: 8px 8px 0;
+        overflow: hidden;
+        border: 1px solid #38262c;
+        border-radius: 18px;
+        background: linear-gradient(150deg, #1d171b, #121114);
+        box-shadow: 0 8px 20px #0003;
+      }
+      .herb-image {
+        position: relative;
+        aspect-ratio: 1;
+        overflow: hidden;
+        border-radius: 11px;
+        background: radial-gradient(ellipse at 50% 40%, #2c252a, #1b181d 80%);
+        border: 1px solid #ffffff08;
+      }
+      .herb-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .herb h3 {
+        padding: 16px 4px 18px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.35;
+        color: #f5edf0;
+        overflow-wrap: anywhere;
+      }
+      .herb h3::before {
+        content: '';
+        display: block;
+        width: 22px;
+        height: 2px;
+        margin: 0 auto 10px;
+        border-radius: 2px;
+        background: var(--red);
+      }
+      @media (max-width: 360px) {
+        .ingredient-grid { gap: 12px 10px; }
+        .herb { padding: 6px 6px 0; border-radius: 14px; }
+        .herb h3 { font-size: 16px; padding: 13px 2px 15px; }
+      }
+      .quality {
+        padding-block: 34px;
+        background: radial-gradient(ellipse at 0 50%, #2a1219, transparent 65%), #0c0c0f;
+      }
+      .certificate-gallery {
+        --certificate-width: clamp(160px, 48vw, 200px);
+        display: flex;
+        gap: 14px;
+        margin-top: 20px;
+        padding: 16px calc((100% - var(--certificate-width)) / 2) 20px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-padding-inline: 0;
+        overscroll-behavior-x: contain;
+        scrollbar-width: none;
+      }
+      .certificate-gallery::-webkit-scrollbar { display: none; }
+      .certificate-gallery:focus-visible {
+        outline: 2px solid var(--red);
+        outline-offset: 5px;
+        border-radius: 8px;
+      }
+      .certificate-card {
+        position: relative;
+        overflow: hidden;
+        flex: 0 0 var(--certificate-width);
+        min-width: 0;
+        scroll-snap-align: center;
+        padding: 10px;
+        border: 1px solid #443039;
+        border-radius: 12px;
+        background: linear-gradient(145deg, #211a20, #121115);
+        box-shadow: 0 8px 20px #0003;
+        opacity: .6;
+        transform: translateY(5px) scale(.94);
+        transition: opacity .65s ease, transform .65s cubic-bezier(.22, 1, .36, 1), border-color .65s ease, box-shadow .65s ease;
+      }
+      .certificate-card.is-active {
+        opacity: 1;
+        transform: translateY(-3px) scale(1);
+        border-color: #a54c5b;
+        box-shadow: 0 8px 24px #0005, 0 0 18px #ff454b0d;
+        animation: certificate-glow 3s ease-in-out infinite;
+      }
+      .certificate-card::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(110deg, transparent 35%, #ffffff09 47%, #ffffff15 50%, transparent 65%);
+        transform: translateX(-130%);
+      }
+      .certificate-card.is-active::after { animation: certificate-shine 3s ease-in-out infinite; }
+      @keyframes certificate-shine {
+        0%, 12% { transform: translateX(-130%); }
+        65%, 100% { transform: translateX(130%); }
+      }
+      @keyframes certificate-glow {
+        0%, 100% { box-shadow: 0 8px 24px #0005, 0 0 12px #ff454b10; }
+        50% { box-shadow: 0 12px 28px #0006, 0 0 22px #ff454b2b; }
+      }
+      .certificate-topline {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 9px;
+        color: #c2aeb6;
+        font-size: 10px;
+        letter-spacing: 1px;
+      }
+      .certificate-topline span:last-child { color: #ff7a87; }
+      .certificate-image {
+        position: relative;
+        height: 160px;
+        overflow: hidden;
+        border: 1px solid #4a3b43;
+        background: #19171b;
+        box-shadow: inset 0 0 0 5px #ffffff03;
+      }
+      .certificate-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .certificate-card figcaption {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 7px;
+        padding-top: 7px;
+        border-top: 1px solid #ffffff12;
+      }
+      .certificate-card figcaption::before {
+        content: '';
+        width: 3px;
+        height: 27px;
+        flex-shrink: 0;
+        border-radius: 2px;
+        background: #e94d60;
+      }
+      .certificate-card h3 { font-size: 16px; color: #f6edf1; }
+      .certificate-card small { display: block; margin-top: 3px; font-size: 11px; color: #aea0a7; }
+      .certificate-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        margin-top: 2px;
+      }
+      .certificate-controls[hidden] { display: none; }
+      .certificate-controls button {
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+        width: 32px;
+        height: 36px;
+        border: 1px solid #422a33;
+        border-radius: 9px;
+        background: #1c151b;
+        color: #ead8de;
+        font-size: 16px;
+      }
+      .certificate-controls .certificate-dot { width: 26px; border: 0; background: transparent; }
+      .certificate-dot::before { content: ''; width: 20px; height: 3px; border-radius: 3px; background: #51353f; transition: background .3s; }
+      .certificate-dot[aria-current="true"]::before { background: #ff626f; box-shadow: 0 0 8px #ff454b45; }
+      .certificate-controls button:hover { color: white; background-color: #39202a; }
+      .final-cta {
+        text-align: center;
+        background:
+          radial-gradient(ellipse at top, #3b1015, transparent 70%), #0b090a;
+      }
+      .final-cta .eyebrow {
+        justify-content: center;
+      }
+      .final-cta h3 {
+        margin-top: 25px;
+        font-size: 24px;
+      }
+      .final-cta small {
+        color: var(--muted);
+      }
+      .section-head {
+        margin-bottom: 23px;
+      }
+      .form-card {
+        background: #141416;
+        padding: 22px 18px;
+        border: 1px solid #452226;
+        border-radius: 18px;
+      }
+      .field {
+        margin-bottom: 18px;
+      }
+      .field label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 7px;
+      }
+      .field input {
+        width: 100%;
+        min-height: 53px;
+        background: #09090b;
+        color: white;
+        border: 1px solid #424247;
+        border-radius: 9px;
+        padding: 12px;
+        outline: none;
+      }
+      .field input:focus {
+        border-color: var(--red);
+        box-shadow: 0 0 0 3px #ff454b20;
+      }
+      .field input::placeholder {
+        color: #94949c;
+        font-size: 15px;
+      }
+      .submit {
+        width: 100%;
+        cursor: pointer;
+        margin-top: 8px;
+      }
+      .submit:disabled {
+        opacity: 0.6;
+        cursor: wait;
+      }
+      .err {
+        display: none;
+        color: #ff8990;
+        font-size: 13px;
+        margin-top: 5px;
+      }
+      .err.show {
+        display: block;
+      }
+      .secure {
+        text-align: center;
+        color: var(--muted);
+        font-size: 11px;
+        margin-top: 15px;
+      }
+      .review-note {
+        padding: 22px;
+        border: 1px dashed #534044;
+        border-radius: 15px;
+        margin-top: 22px;
+      }
+      .review-note i {
+        color: var(--red);
+        font-size: 25px;
+        margin-bottom: 12px;
+      }
+      .review-note strong {
+        color: white;
+      }
+      .review-note .fine {
+        margin-top: 13px;
+      }
+      #customer-reviews {
+        padding-block: 34px;
+        background: radial-gradient(ellipse at 100% 20%, #2b141b, transparent 60%), #0b0b0e;
+      }
+      .customer-reviews-list { display: grid; gap: 18px; margin-top: 26px; }
+      .customer-review {
+        position: relative;
+        overflow: hidden;
+        padding: 21px 19px;
+        border: 1px solid #432a34;
+        border-radius: 18px;
+        background: linear-gradient(135deg, #20171d, #121114);
+        box-shadow: 0 10px 25px #0003;
+      }
+      .customer-review::before {
+        content: '';
+        position: absolute;
+        inset: 0 25% auto;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #d96075, transparent);
+      }
+      .customer-review-header { display: flex; align-items: center; gap: 13px; }
+      .customer-photo {
+        flex: 0 0 62px;
+        width: 62px;
+        height: 62px;
+        overflow: hidden;
+        border: 1px solid #6b3545;
+        border-radius: 50%;
+        background: radial-gradient(circle at 40% 30%, #38252f, #1d181e);
+        box-shadow: 0 0 0 4px #ffffff03;
+      }
+      .customer-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+      .customer-review h3 { font-size: 19px; color: #fff2f5; }
+      .customer-city { margin-top: 2px; font-size: 13px; color: #b8a6ae; }
+      .customer-rating { margin-top: 18px; color: #ffc46b; font-size: 17px; letter-spacing: 3px; line-height: 1; }
+      .customer-review blockquote { margin-top: 14px; }
+      .customer-review blockquote p { font-size: 16px; line-height: 1.8; color: #d1c5cb; }
+      .customer-review-note { margin-top: 18px; font-size: 13px; color: #ac9da5; }
+      @media (max-width: 360px) {
+        .customer-review { padding: 18px 15px; }
+        .customer-review blockquote p { font-size: 15px; }
+      }
+      details {
+        border-bottom: 1px solid var(--line);
+        padding: 18px 0;
+      }
+      summary {
+        list-style: none;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      summary::-webkit-details-marker {
+        display: none;
+      }
+      summary:after {
+        content: "+";
+        color: var(--red);
+        font-size: 23px;
+        line-height: 1;
+      }
+      details[open] summary:after {
+        content: "−";
+      }
+      details p {
+        padding-top: 12px;
+        font-size: 16px;
+      }
+      .disclaimer {
+        padding: 25px;
+        font-size: 11px;
+        line-height: 1.65;
+        color: rgb(170 170 170 / 75%);
+        background: #0c0c0e;
+      }
+      .disclaimer strong {
+        display: block;
+        color: rgb(255 69 75 / 70%);
+        letter-spacing: 1px;
+        font-size: 10px;
+        margin-bottom: 7px;
+      }
+      .policy-links {
+        padding: 12px 10px 22px;
+        display: flex;
+        justify-content: center;
+        gap: 9px;
+        flex-wrap: wrap;
+        background: #07050a;
+      }
+      .policy-links button {
+        border: 0;
+        background: none;
+        font-size: 9px;
+        color: rgb(170 170 170 / 75%);
+        padding: 3px;
+      }
+      .policy-links button:hover,
+      .policy-links button:focus-visible {
+        color: #ccc;
+      }
+      .sticky {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 115%);
+        max-width: var(--w);
+        width: 100%;
+        padding: 10px 18px max(10px, env(safe-area-inset-bottom));
+        background: #101012ed;
+        border-top: 1px solid var(--line);
+        z-index: 80;
+        visibility: hidden;
+        transition: transform 0.25s;
+      }
+      .sticky.show {
+        transform: translate(-50%, 0);
+        visibility: visible;
+      }
+      .sticky a {
+        display: block;
+        background: #db242d;
+        text-align: center;
+        padding: 11px;
+        border-radius: 9px;
+        font-weight: 700;
+      }
+      .loading {
+        position: fixed;
+        inset: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: #000b;
+        z-index: 300;
+      }
+      .loading.show {
+        display: flex;
+      }
+      .loading-box {
+        background: #19191b;
+        padding: 24px;
+        border-radius: 16px;
+      }
+      .spinner {
+        width: 36px;
+        height: 36px;
+        margin: 0 auto 12px;
+        border: 3px solid #444;
+        border-top-color: var(--red);
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @media (max-width: 360px) {
+        section {
+          padding: 30px 18px;
+        }
+        h1,
+        h2 {
+          font-size: 30px;
+        }
+        .tile {
+          padding: 15px 12px;
+        }
+        .grid {
+          gap: 9px;
+        }
+        .tile h3 {
+          font-size: 19px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        *,
+        *:before,
+        *:after {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+      /* Match the original landing page width and compact vertical spacing. */
+      :root {
+        --w: 450px;
+      }
+      .page {
+        width: 100%;
+        min-height: 100vh;
+        padding-bottom: 65px;
+      }
+      section {
+        padding: 20px;
+      }
+      h1,
+      h2 {
+        font-size: 34px;
+        line-height: 1.22;
+        letter-spacing: -0.4px;
+      }
+      h3 {
+        font-size: 21px;
+        line-height: 1.3;
+      }
+      .eyebrow {
+        font-size: 18px;
+        letter-spacing: 1.4px;
+      }
+      .grid {
+        margin-top: 18px;
+      }
+      .tile {
+        padding: 17px;
+      }
+      #problem-section > h2 {
+        margin-top: 5px;
+      }
+      .problem-timeline {
+        position: relative;
+        display: grid;
+        gap: 22px;
+        margin-top: 28px;
+        padding: 10px 0;
+        list-style: none;
+      }
+      .problem-timeline::before {
+        content: "";
+        position: absolute;
+        inset: 0 auto 0 50%;
+        width: 1px;
+        background: linear-gradient(
+          transparent,
+          #ff454b80 5%,
+          #ff454b80 95%,
+          transparent
+        );
+      }
+      .problem-item {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        column-gap: 32px;
+        align-items: center;
+      }
+      .problem-item::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 8px;
+        height: 8px;
+        transform: translate(-50%, -50%);
+        border: 1px solid #b75a60;
+        border-radius: 50%;
+        background: #170e10;
+        box-shadow: 0 0 0 4px #ff454b0d;
+      }
+      .problem-item:first-child::after {
+        background: var(--red);
+        border-color: #ffd4d6;
+        box-shadow:
+          0 0 0 5px #ff454b20,
+          0 0 16px #ff454b65;
+      }
+      .problem-card {
+        position: relative;
+        grid-column: 1;
+        grid-row: 1;
+        overflow: hidden;
+        min-height: 124px;
+        aspect-ratio: 3 / 2;
+        background: #fffafb;
+        border: 1px solid #f4dfe2;
+        border-radius: 9px;
+        box-shadow:
+          0 0 22px #ff454b16,
+          0 8px 24px #0005;
+      }
+      .problem-card img {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .problem-label {
+        grid-column: 2;
+        grid-row: 1;
+        color: #d7c4c6;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      .problem-item:nth-child(even) .problem-card {
+        grid-column: 2;
+      }
+      .problem-item:nth-child(even) .problem-label {
+        grid-column: 1;
+        text-align: right;
+      }
+      @media (max-width: 360px) {
+        .problem-item {
+          column-gap: 24px;
+        }
+        .problem-label {
+          font-size: 16px;
+        }
+      }
+      .tile i {
+        margin-bottom: 12px;
+      }
+      .steps {
+        margin-top: 18px;
+      }
+      .step {
+        padding: 17px 0;
+      }
+      .checklist {
+        margin-top: 17px;
+        gap: 9px;
+      }
+      .cta {
+        margin-top: 18px;
+        padding: 13px 20px;
+      }
+      .section-head {
+        margin-bottom: 22px;
+      }
+      .form-card {
+        padding: 24px 18px;
+      }
+      .field {
+        margin-bottom: 14px;
+      }
+      .field input {
+        min-height: 48px;
+        padding: 9px 13px;
+      }
+      .review-note {
+        padding: 18px;
+        margin-top: 18px;
+      }
+      .disclaimer {
+        padding: 20px;
+      }
+      @media (max-width: 360px) {
+        section {
+          padding: 20px 15px;
+        }
+        .tile {
+          padding: 15px 12px;
+        }
+      }
+      .pp-overlay {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100dvh;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px;
+        background: rgba(13, 36, 27, 0.62);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+      .pp-overlay.show {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+      .pp-modal {
+        width: min(420px, calc(100vw - 28px));
+        max-height: 72dvh;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        touch-action: pan-y;
+        -webkit-overflow-scrolling: touch;
+        background: #fff;
+        border-radius: 18px;
+        padding: 22px 17px;
+        position: relative;
+      }
+      .pp-close {
+        position: sticky;
+        top: 0;
+        float: right;
+        width: 30px;
+        height: 30px;
+        border: 0;
+        border-radius: 50%;
+        background: #e4eee8;
+        color: var(--green);
+        cursor: pointer;
+      }
+      .pp-title,
+      .pp-mtitle {
+        font:
+          700 21px "Halant",
+          serif;
+        color: var(--green);
+        margin: 2px 38px 8px 0;
+      }
+      .pp-mtitle i {
+        margin-right: 7px;
+        color: var(--leaf);
+      }
+      .pp-badge,
+      .pp-mbadge {
+        display: inline-block;
+        background: #e4eee8;
+        color: var(--green);
+        font-size: 10px;
+        border-radius: 999px;
+        padding: 3px 9px;
+        margin-bottom: 10px;
+      }
+      .pp-mpara {
+        margin: 7px 0;
+      }
+      .pp-modal p,
+      .pp-modal li {
+        font-size: 13px;
+        line-height: 1.65;
+        color: #4d504c;
+      }
+      .pp-modal ul {
+        padding-left: 18px;
+        margin: 8px 0;
+      }
+      .pp-note,
+      .pp-mhl {
+        background: #edf4ef;
+        border-left: 3px solid var(--leaf);
+        padding: 9px 10px;
+        border-radius: 0 8px 8px 0;
+        margin: 10px 0;
+        color: #35483d;
+        font-size: 13px;
+        line-height: 1.55;
+      }
+      .pp-cgrid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+        margin-top: 12px;
+      }
+      .pp-citem {
+        min-width: 0;
+        padding: 12px 9px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: #fffdf7;
+        text-align: center;
+      }
+      .pp-citem > i {
+        color: var(--leaf);
+        font-size: 21px;
+      }
+      .pp-clbl {
+        margin-top: 5px;
+        color: var(--muted);
+        font-size: 10px;
+      }
+      .pp-cval {
+        overflow-wrap: anywhere;
+        color: var(--green);
+        font-size: 12px;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <!-- Section 1: awareness banner -->
+      <div class="banner" aria-label="GathHeal banner">
+        <img
+          src="images/banner.png"
+          alt="GathHeal awareness banner"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        />
+      </div>
+      <section id="problem-section">
+        <div class="eyebrow">समस्या को समझें</div>
+        <h2>इन संकेतों पर <span class="accent">ध्यान दें</span></h2>
+        <ul class="problem-timeline">
+          <li class="problem-item">
+            <div class="problem-card">
+              <img src="images/problem1.jpg" alt="" loading="lazy" />
+            </div>
+            <h3 class="problem-label">गांठ के आकार या बनावट में बदलाव</h3>
+          </li>
+          <li class="problem-item">
+            <div class="problem-card">
+              <img src="images/problem2.png" alt="" loading="lazy" />
+            </div>
+            <h3 class="problem-label">छूने पर दर्द या संवेदनशीलता</h3>
+          </li>
+          <li class="problem-item">
+            <div class="problem-card">
+              <img src="images/problem3.jpg" alt="" loading="lazy" />
+            </div>
+            <h3 class="problem-label">सूजन, दबाव या भारीपन</h3>
+          </li>
+          <li class="problem-item">
+            <div class="problem-card">
+              <img src="images/problem4.jpg" alt="" loading="lazy" />
+            </div>
+            <h3 class="problem-label">चलने-फिरने में असहजता</h3>
+          </li>
+          <li class="problem-item">
+            <div class="problem-card">
+              <img src="images/problem5.jpeg" alt="" loading="lazy" />
+            </div>
+            <h3 class="problem-label">Appearance को लेकर चिंता</h3>
+          </li>
+        </ul>
+      </section>
+      
+      <section class="product" id="product-intro">
+        <div class="eyebrow">Ayurvedic Herbal Support</div>
+        <h2>GathHeal <span class="accent">Capsules</span></h2>
+        <p class="product-subtitle">आपकी दिनचर्या में, प्रकृति का साथ।</p>
+        <figure class="product-showcase">
+          <div class="product-showcase-tag"><i class="ti ti-leaf" aria-hidden="true"></i> HERBAL WELLNESS</div>
+          <div class="product-image-slot">
+            <img src="images/product.avif" alt="GathHeal Capsules product pack" loading="lazy" decoding="async"> 
+          </div>
+          <figcaption>
+            <strong>Gath<span>Heal</span></strong>
+            <small>HERBAL WELLNESS FORMULA</small>
+          </figcaption>
+        </figure>
+        <p class="product-description">
+          चुनिंदा herbs से तैयार सुविधाजनक capsule formulation, जिसे सही diet और
+          expert guidance के साथ अपनी routine में शामिल करें।
+        </p>
+        <ul class="product-features">
+          <li><i class="ti ti-leaf" aria-hidden="true"></i>चुनिंदा<br />Ayurvedic herbs</li>
+          <li><i class="ti ti-pill" aria-hidden="true"></i>आसान<br />Capsule format</li>
+          <li><i class="ti ti-calendar" aria-hidden="true"></i>आपकी<br />Daily routine में</li>
+        </ul>
+      </section>
+
+      <section id="how-it-works">
+        <div class="eyebrow">How GathHeal Works</div>
+        <h2>रोज़मर्रा की <span class="accent">देखभाल के लिए</span></h2>
+        <div class="support-grid">
+          <article class="support-card">
+            <div class="support-image">
+              <div class="support-photo">
+              <!-- Add your image: uncomment the img below and update src as needed. -->
+              <img src="images/work1.jpg" alt="" loading="lazy" decoding="async"> 
+                          </div>
+            </div>
+            <div class="support-copy">
+              <h3>Inflammation Support</h3>
+              <p>शरीर की सामान्य प्रक्रियाओं को support करने के लिए।</p>
+            </div>
+          </article>
+          <article class="support-card">
+            <div class="support-image">
+              <div class="support-photo">
+              <img src="images/work2.jpg" alt="" loading="lazy" decoding="async"> 
+                          </div>
+            </div>
+            <div class="support-copy">
+              <h3>Comfort Support</h3>
+              <p>Daily comfort और routine का साथ देने के लिए।</p>
+            </div>
+          </article>
+          <article class="support-card">
+            <div class="support-image">
+              <div class="support-photo">
+             <img src="images/work3.jpg" alt="" loading="lazy" decoding="async"> 
+                          </div>
+            </div>
+            <div class="support-copy">
+              <h3>Natural Recovery Support</h3>
+              <p>शरीर की प्राकृतिक प्रक्रियाओं को support करने के लिए।</p>
+            </div>
+          </article>
+          <article class="support-card">
+            <div class="support-image">
+              <div class="support-photo">
+              <img src="images/work4.jpg" alt="" loading="lazy" decoding="async">
+                          </div>
+            </div>
+            <div class="support-copy">
+              <h3>Immunity Support</h3>
+              <p>Overall wellness routine का हिस्सा।</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="ingredients">
+        <div class="eyebrow">Ingredients</div>
+        <h2>चुनिंदा <span class="accent">Ayurvedic Herbs</span></h2>
+        <div class="ingredient-grid">
+          <article class="herb">
+            <div class="herb-image">
+              <!-- Uncomment the img and update src to add your ingredient photo. -->
+              <img src="images/ing1.jpg" alt="Kalmegh herb" loading="lazy" decoding="async"> 
+            </div>
+            <h3>Kalmegh</h3>
+          </article>
+          <article class="herb">
+            <div class="herb-image">
+              <!-- <img src="images/chirchita.jpg" alt="Chirchita herb" loading="lazy" decoding="async"> -->
+              <img src="images/ing2.jpg" alt="Chirchita herb" loading="lazy" decoding="async">
+            </div>
+            <h3>Chirchita</h3>
+          </article>
+          <article class="herb">
+            <div class="herb-image">
+              <!-- <img src="images/pashanbhed.jpg" alt="Pashanbhed herb" loading="lazy" decoding="async"> -->
+              <img src="images/ing3.jpg" alt="Pashanbhed herb" loading="lazy" decoding="async">
+            </div>
+            <h3>Pashanbhed</h3>
+          </article>
+          <article class="herb">
+            <div class="herb-image">
+              <!-- <img src="images/makoi-leaf.jpg" alt="Makoi leaf" loading="lazy" decoding="async"> -->
+              <img src="images/ing4.jpg" alt="Makoi leaf" loading="lazy" decoding="async">
+            </div>
+            <h3>Makoi Leaf</h3>
+          </article>
+        </div>
+      </section>
+      <section class="quality" id="quality">
+        <div class="eyebrow">गुणवत्ता</div>
+        <h2>गुणवत्ता से जुड़े<br /><span class="accent">दस्तावेज़</span></h2>
+        <!-- Add the corresponding documents below when available. Labels identify document types, not verified certifications. -->
+        <div class="certificate-gallery" id="certificate-gallery" role="region" aria-label="प्रमाणपत्र गैलरी" tabindex="0">
+          <figure class="certificate-card is-active">
+            <div class="certificate-topline"><span>DOCUMENT</span><span>01 / 04</span></div>
+            <div class="certificate-image">
+              <!-- Uncomment and set src to your certificate image. -->
+              <img src="images/cert1.jpg" alt="GMP certificate" loading="lazy" decoding="async">
+            </div>
+            <figcaption><div><h3>GMP</h3></div></figcaption>
+          </figure>
+          <figure class="certificate-card">
+            <div class="certificate-topline"><span>DOCUMENT</span><span>02 / 04</span></div>
+            <div class="certificate-image">
+              <!-- <img src="images/certificate-iso.jpg" alt="ISO certificate" loading="lazy" decoding="async"> -->
+              <img src="images/cert2.jpg" alt="ISO certificate" loading="lazy" decoding="async">
+            </div>
+            <figcaption><div><h3>ISO</h3></div></figcaption>
+          </figure>
+          <figure class="certificate-card">
+            <div class="certificate-topline"><span>DOCUMENT</span><span>03 / 04</span></div>
+            <div class="certificate-image">
+              <!-- <img src="images/certificate-fssai.jpg" alt="FSSAI license document" loading="lazy" decoding="async"> -->
+              <img src="images/cert3.png" alt="FSSAI license document" loading="lazy" decoding="async">
+            </div>
+            <figcaption><div><h3>FSSAI</h3></div></figcaption>
+          </figure>
+          <figure class="certificate-card">
+            <div class="certificate-topline"><span>DOCUMENT</span><span>04 / 04</span></div>
+            <div class="certificate-image">
+              <!-- <img src="images/testing-report.jpg" alt="Product testing report" loading="lazy" decoding="async"> -->
+              <img src="images/cert4.webp" alt="Product testing report" loading="lazy" decoding="async">
+            </div>
+            <figcaption><div><h3>Testing Report</h3></div></figcaption>
+          </figure>
+        </div>
+        <div class="certificate-controls" role="group" aria-label="Certificate navigation" hidden>
+          <button type="button" class="certificate-dot" data-certificate-index="0" aria-label="Show GMP" aria-current="true"></button>
+          <button type="button" class="certificate-dot" data-certificate-index="1" aria-label="Show ISO" aria-current="false"></button>
+          <button type="button" class="certificate-dot" data-certificate-index="2" aria-label="Show FSSAI" aria-current="false"></button>
+          <button type="button" class="certificate-dot" data-certificate-index="3" aria-label="Show testing report" aria-current="false"></button>
+        </div>
+      </section>
+      <section class="final-cta">
+        <div class="eyebrow">अगला कदम</div>
+        <h2>
+          गांठ में बदलाव हो तो<br /><span class="accent">पहले जाँच कराएँ</span>
+        </h2>
+        <p class="intro">
+          सही जानकारी और qualified healthcare professional की सलाह से अगला कदम
+          तय करें।
+        </p>
+        <h3>GathHeal Capsules</h3>
+        <small>Ayurvedic Herbal Wellness Formula</small
+        ><a class="cta" href="#order-form"
+          >सलाह लें | ऑर्डर करें <span aria-hidden="true">↗</span></a
+        >
+      </section>
+      <section id="order-form">
+        <div class="section-head">
+          <div class="eyebrow">ऑर्डर करें</div>
+          <h2>
+            GathHeal की जानकारी<br />और <span class="accent">ऑर्डर के लिए</span>
+          </h2>
+        </div>
+        <div class="form-card">
+          <form
+            id="orderForm"
+            method="post"
+            action="https://script.google.com/macros/s/AKfycbyeE82FEPSsXx-D4xrtz1CCKRqrUphicTmQKZD1wYvon5MHZC-m28-pwMfN5sPWm9-R/exec"
+            accept-charset="UTF-8"
+            onsubmit="return submitForm(event);"
+          >
+            <input type="hidden" name="key" value="XQP4bdtEZkt3" />
+            <input type="hidden" name="product" value="GathHeal Capsules" />
+            <input type="hidden" name="source" value="GathHeal Website" />
+            <input type="hidden" name="date" id="date" />
+            <input type="hidden" name="event_id" id="event_id" />
+            <input type="hidden" name="page_url" id="page_url" />
+            <input type="hidden" name="referrer" id="referrer" />
+            <input type="hidden" name="utm_source" /><input
+              type="hidden"
+              name="utm_medium"
+            /><input type="hidden" name="utm_campaign" />
+            <input type="hidden" name="utm_campaign_id" /><input
+              type="hidden"
+              name="utm_adset"
+            /><input type="hidden" name="utm_adset_id" />
+            <input type="hidden" name="utm_ad" /><input
+              type="hidden"
+              name="utm_ad_id"
+            /><input type="hidden" name="utm_placement" />
+            <input type="hidden" name="fbclid" /><input
+              type="hidden"
+              name="fbc"
+            /><input type="hidden" name="fbp" />
+            <div class="field">
+              <label for="name">आपका नाम *</label
+              ><input
+                type="text"
+                id="name"
+                name="name"
+                required
+                autocomplete="name"
+                pattern="[A-Za-z\u0900-\u097F ]+"
+                placeholder="अपना पूरा नाम दर्ज करें"
+              />
+              <div class="err" id="nameError">कृपया पूरा नाम दर्ज करें।</div>
+            </div>
+            <div class="field">
+              <label for="phone">मोबाइल नंबर *</label
+              ><input
+                type="tel"
+                id="phone"
+                name="phone"
+                maxlength="10"
+                inputmode="numeric"
+                autocomplete="tel"
+                pattern="[6-9][0-9]{9}"
+                required
+                placeholder="अपना 10 अंकों का नंबर दर्ज करें"
+              />
+              <div class="err" id="phoneError">
+                कृपया सही 10 अंकों का नंबर दर्ज करें।
+              </div>
+            </div>
+            <button class="submit" id="submitBtn" type="submit">
+              ऑर्डर के लिए संपर्क करें
+            </button>
+            <div class="secure">
+              🔒 Secure Order · 📦 Delivery Details · ✅ Product Information
+            </div>
+          </form>
+        </div>
+      </section>
+      <section id="customer-reviews">
+        <div class="eyebrow">ग्राहक अनुभव</div>
+        <h2>ग्राहकों के <span class="accent">अनुभव</span></h2>
+        <div class="customer-reviews-list">
+          <article class="customer-review" aria-labelledby="review-amit">
+            <header class="customer-review-header">
+              <div class="customer-photo">
+                <!-- Uncomment and update src to add the customer's photo. -->
+                <img src="images/test1.jpg" alt="अमित शर्मा" loading="lazy" decoding="async">
+              </div>
+              <div><h3 id="review-amit">अमित शर्मा</h3><p class="customer-city">जयपुर</p></div>
+            </header>
+            <div class="customer-rating" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote><p>“मैंने GathHeal को 15 दिनों तक अपनी daily routine में शामिल किया। और routine follow किया । लगभग 1 महीने के नियमित उपयोग के बाद मुझे अपने overall comfort और wellness में बेहतर support महसूस हुआ।”</p></blockquote>
+          </article>
+          <article class="customer-review" aria-labelledby="review-pooja">
+            <header class="customer-review-header">
+              <div class="customer-photo">
+                <!-- <img src="images/customer-pooja.jpg" alt="पूजा वर्मा" loading="lazy" decoding="async"> -->
+                <img src="images/test2.jpg" alt="पूजा वर्मा" loading="lazy" decoding="async">
+              </div>
+              <div><h3 id="review-pooja">पूजा वर्मा</h3><p class="customer-city">भोपाल</p></div>
+            </header>
+            <div class="customer-rating" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote><p>“मुझे heaviness और discomfort की चिंता रहती थी। GathHeal को नियमित लेने के बाद रोज़मर्रा की activities में थोड़ा अधिक comfort महसूस हुआ।”</p></blockquote>
+          </article>
+          <article class="customer-review" aria-labelledby="review-rahul">
+            <header class="customer-review-header">
+              <div class="customer-photo">
+                <!-- <img src="images/customer-rahul.jpg" alt="राहुल मेहता" loading="lazy" decoding="async"> -->
+                <img src="images/test3.jpg" alt="राहुल मेहता" loading="lazy" decoding="async">
+              </div>
+              <div><h3 id="review-rahul">राहुल मेहता</h3><p class="customer-city">अहमदाबाद</p></div>
+            </header>
+            <div class="customer-rating" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote><p>“नियमित सेवन और balanced lifestyle के साथ रोज़मर्रा के कामों में comfort महसूस हुआ। Product की packaging सुरक्षित थी और delivery समय पर मिली।”</p></blockquote>
+          </article>
+        </div>
+      </section>
+      <section>
+        <div class="eyebrow">FAQs</div>
+        <h2>आपके सवाल, <span class="accent">जवाब यहाँ</span></h2>
+        <div class="intro">
+          <details>
+            <summary>GathHeal क्या है?</summary>
+            <p>
+              चुनिंदा Ayurvedic herbs से तैयार एक herbal wellness formulation.
+            </p>
+          </details>
+          <details>
+            <summary>क्या यह हर तरह की गांठ के लिए है?</summary>
+            <p>
+              नहीं। गांठ के कारण अलग हो सकते हैं। चिकित्सकीय जाँच ज़रूरी है।
+            </p>
+          </details>
+          <details>
+            <summary>इसे कैसे लें?</summary>
+            <p>
+              Product label या qualified healthcare professional की सलाह के
+              अनुसार।
+            </p>
+          </details>
+          <details>
+            <summary>क्या COD उपलब्ध है?</summary>
+            <p>जहाँ सेवा उपलब्ध हो, वहाँ COD मिल सकता है।</p>
+          </details>
+        </div>
+      </section>
+      <div class="disclaimer">
+        <strong>DISCLAIMER</strong>GathHeal कोई medical diagnosis, treatment या
+        cure नहीं है। यह डॉक्टर की जाँच या सलाह का विकल्प नहीं है। किसी भी नई,
+        बढ़ती या बदलती गांठ के लिए qualified healthcare professional से जाँच
+        कराएँ। Product का उपयोग label और विशेषज्ञ की सलाह के अनुसार करें।
+      </div>
+      <div class="policy-links">
+        <button onclick="openModal('privacy')">Privacy</button
+        ><button onclick="openModal('terms')">Terms</button
+        ><button onclick="openModal('shipping')">Shipping</button
+        ><button onclick="openModal('cancel')">Cancellation</button
+        ><button onclick="openModal('contact')">Contact</button
+        ><button onclick="openModal('disclaimer')">Legal Disclaimer</button>
+      </div>
+
+      <div class="sticky" id="order-sticky">
+        <a href="#order-form">ऑर्डर के लिए संपर्क करें →</a>
+      </div>
+      <div class="loading" id="loading">
+        <div class="loading-box">
+          <div class="spinner"></div>
+          <p>आपकी request भेजी जा रही है...</p>
+        </div>
+      </div>
+    </main>
+
+    <div class="pp-overlay" id="pp-overlay" onclick="closeIfOutside(event)">
+      <div class="pp-modal" id="pp-modal">
+        <button class="pp-close" onclick="closeModal()" aria-label="Close">
+          ×
+        </button>
+        <div id="pp-content"></div>
+      </div>
+    </div>
+
+    <script>
+      // Certificate carousel: ordered autoplay with progress indicators.
+      (() => {
+        const gallery = document.querySelector('.certificate-gallery');
+        const controls = document.querySelector('.certificate-controls');
+        if (!gallery || !controls) return;
+        const cards = [...gallery.querySelectorAll('.certificate-card')];
+        const dots = [...controls.querySelectorAll('.certificate-dot')];
+        const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+        let active = 0, timer = 0, frame = 0, animation = 0;
+        let touching = false;
+        gallery.style.scrollSnapType = 'none';
+        gallery.style.scrollBehavior = 'auto';
+
+        function mark(index) {
+          active = index;
+          cards.forEach((card, i) => card.classList.toggle('is-active', i === index));
+          dots.forEach((dot, i) => dot.setAttribute('aria-current', String(i === index)));
+        }
+        function move(index, instant = false) {
+          cancelAnimationFrame(animation);
+          animation = 0;
+          index = (index + cards.length) % cards.length;
+          const card = cards[index];
+          const cardRect = card.getBoundingClientRect();
+          const galleryRect = gallery.getBoundingClientRect();
+          const from = gallery.scrollLeft;
+          const to = from + cardRect.left + cardRect.width / 2 - galleryRect.left - gallery.clientWidth / 2;
+          mark(index);
+          if (instant || reducedMotion.matches) {
+            gallery.scrollLeft = to;
+            return;
+          }
+          const started = performance.now();
+          function slide(now) {
+            const progress = Math.min(1, (now - started) / 900);
+            const eased = progress < .5 ? 4 * progress ** 3 : 1 - (-2 * progress + 2) ** 3 / 2;
+            gallery.scrollLeft = from + (to - from) * eased;
+            if (progress < 1) animation = requestAnimationFrame(slide);
+            else animation = 0;
+          }
+          animation = requestAnimationFrame(slide);
+        }
+        function schedule() {
+          clearTimeout(timer);
+          if (touching || document.hidden || cards.length < 2) return;
+          timer = setTimeout(() => {
+            const rect = gallery.getBoundingClientRect();
+            if (rect.bottom > 0 && rect.top < window.innerHeight) move(active + 1);
+            schedule();
+          }, 2400);
+        }
+        dots.forEach((dot, index) => dot.addEventListener('click', () => { move(index); schedule(); }));
+        gallery.addEventListener('scroll', () => {
+          if (frame || animation) return;
+          frame = requestAnimationFrame(() => {
+            frame = 0;
+            if (animation) return;
+            const rect = gallery.getBoundingClientRect();
+            const center = rect.left + gallery.clientWidth / 2;
+            let closest = 0, distance = Infinity;
+            cards.forEach((card, i) => {
+              const box = card.getBoundingClientRect();
+              const delta = Math.abs(box.left + box.width / 2 - center);
+              if (delta < distance) { distance = delta; closest = i; }
+            });
+            mark(closest);
+          });
+        }, { passive: true });
+        gallery.addEventListener('keydown', (event) => {
+          if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+          event.preventDefault();
+          move(event.key === 'Home' ? 0 : event.key === 'End' ? cards.length - 1 : active + (event.key === 'ArrowRight' ? 1 : -1));
+        });
+        gallery.addEventListener('pointerdown', () => { touching = true; cancelAnimationFrame(animation); animation = 0; schedule(); }, { passive: true });
+        for (const event of ['pointerup', 'pointercancel']) window.addEventListener(event, () => {
+          if (!touching) return;
+          touching = false;
+          schedule();
+        }, { passive: true });
+        document.addEventListener('visibilitychange', schedule);
+        reducedMotion.addEventListener('change', schedule);
+        window.addEventListener('resize', () => move(active, true));
+        controls.hidden = false;
+        move(0, true);
+        schedule();
+      })();
+    </script>
+    <script>
+      const $ = (s) => document.querySelector(s),
+        $$ = (s) => [...document.querySelectorAll(s)];
+
+      // Sticky order bar: hidden on the banner, visible from Problem onward, hidden on the order form.
+      const stickyOrder = $("#order-sticky");
+      const bannerSection = $(".banner");
+      const problemSection = bannerSection?.nextElementSibling || null;
+      const orderFormSection = $("#order-form");
+      let stickyFrame = 0;
+
+      function isInViewport(element) {
+        if (!element) return false;
+        const rect = element.getBoundingClientRect();
+        return rect.top < window.innerHeight && rect.bottom > 0;
+      }
+
+      function updateStickyOrder() {
+        stickyFrame = 0;
+        if (!stickyOrder) return;
+
+        const problemStarted =
+          problemSection &&
+          problemSection.getBoundingClientRect().top < window.innerHeight;
+        const hideOnBanner = isInViewport(bannerSection) && !problemStarted;
+        const hideOnOrderForm = isInViewport(orderFormSection);
+
+        stickyOrder.classList.toggle(
+          "show",
+          !(hideOnBanner || hideOnOrderForm),
+        );
+      }
+
+      function scheduleStickyUpdate() {
+        if (!stickyFrame)
+          stickyFrame = requestAnimationFrame(updateStickyOrder);
+      }
+
+      window.addEventListener("scroll", scheduleStickyUpdate, {
+        passive: true,
+      });
+      window.addEventListener("resize", scheduleStickyUpdate);
+      updateStickyOrder();
+      $$(".faq button").forEach((b) =>
+        b.addEventListener("click", () => {
+          const f = b.parentElement;
+          f.classList.toggle("open");
+          b.querySelector("span").textContent = f.classList.contains("open")
+            ? "−"
+            : "+";
+        }),
+      );
+
+      const UTM_KEYS = [
+        "utm_source",
+        "utm_medium",
+        "utm_campaign",
+        "utm_campaign_id",
+        "utm_adset",
+        "utm_adset_id",
+        "utm_ad",
+        "utm_ad_id",
+        "utm_placement",
+      ];
+      function setHidden(n, v) {
+        const i = document.querySelector('#orderForm input[name="' + n + '"]');
+        if (i) i.value = v || "";
+      }
+      function cookie(n) {
+        const m = document.cookie.match(
+          new RegExp("(?:^|;\\s*)" + n + "=([^;]*)"),
+        );
+        return m ? decodeURIComponent(m[1]) : "";
+      }
+      function savedValue(k) {
+        try {
+          return sessionStorage.getItem(k) || "";
+        } catch (_) {
+          return "";
+        }
+      }
+      function capture() {
+        const p = new URLSearchParams(location.search);
+        UTM_KEYS.forEach((k) => setHidden(k, p.get(k) || savedValue(k)));
+        UTM_KEYS.forEach((k) => {
+          if (p.get(k))
+            try {
+              sessionStorage.setItem(k, p.get(k));
+            } catch (_) {
+              /* storage may be unavailable */
+            }
+        });
+        const fbclid = p.get("fbclid") || "";
+        setHidden("fbclid", fbclid);
+        setHidden(
+          "fbc",
+          cookie("_fbc") || (fbclid ? "fb.1." + Date.now() + "." + fbclid : ""),
+        );
+        setHidden("fbp", cookie("_fbp"));
+      }
+      capture();
+
+      // Order form: allow only letters/spaces in name and valid Indian mobile digits.
+      const nameInput = $("#name");
+      const phoneInput = $("#phone");
+
+      nameInput?.addEventListener("input", () => {
+        nameInput.value = nameInput.value
+          .replace(/[^A-Za-z\u0900-\u097F ]/g, "")
+          .replace(/\s{2,}/g, " ")
+          .replace(/^\s+/, "");
+        err("nameError", false);
+      });
+
+      phoneInput?.addEventListener("input", () => {
+        let value = phoneInput.value.replace(/\D/g, "").slice(0, 10);
+        if (value && !/^[6-9]/.test(value)) value = value.slice(1);
+        phoneInput.value = value;
+        err("phoneError", false);
+      });
+
+      function validName(v) {
+        return /^[A-Za-z\u0900-\u097F]+(?: [A-Za-z\u0900-\u097F]+)+$/.test(
+          v.trim(),
+        );
+      }
+      function validPhone(v) {
+        return /^[6-9][0-9]{9}$/.test(v);
+      }
+      function err(id, on) {
+        document.getElementById(id)?.classList.toggle("show", on);
+      }
+      function eventId() {
+        return globalThis.crypto?.randomUUID
+          ? globalThis.crypto.randomUUID()
+          : "evt-" + Date.now() + "-" + Math.random().toString(16).slice(2);
+      }
+      const FORM_ENDPOINT =
+        "https://script.google.com/macros/s/AKfycbxT6e4aWhK8JTf9ebsb7OQgqvkRDXd1y5QQctOOkEnERqRnfzUv_6XF30E-9ne1Jwjx/exec";
+      const THANK_YOU_PAGE = "./Thankyou.html";
+      let formSubmitting = false;
+
+      async function submitForm(e) {
+        e.preventDefault();
+        if (formSubmitting) return false;
+
+        const form = document.getElementById("orderForm");
+        const submitBtn = document.getElementById("submitBtn");
+        const loading = document.getElementById("loading");
+        const name = nameInput.value.trim().replace(/\s+/g, " ");
+        const phone = phoneInput.value.replace(/\D/g, "");
+        const nameOk = validName(name);
+        const phoneOk = validPhone(phone);
+
+        err("nameError", !nameOk);
+        err("phoneError", !phoneOk);
+        if (!nameOk || !phoneOk) return false;
+
+        nameInput.value = name;
+        phoneInput.value = phone;
+        capture();
+        setHidden(
+          "date",
+          new Intl.DateTimeFormat("en-IN", {
+            timeZone: "Asia/Kolkata",
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: false,
+          }).format(new Date()),
+        );
+        setHidden("event_id", eventId());
+        setHidden("page_url", location.href);
+        setHidden("referrer", document.referrer);
+
+        formSubmitting = true;
+        submitBtn.disabled = true;
+        submitBtn.textContent = "SUBMITTING...";
+        loading?.classList.add("show");
+
+        try {
+          const payload = new URLSearchParams();
+          new FormData(form).forEach((value, key) =>
+            payload.append(key, value),
+          );
+
+          await fetch(FORM_ENDPOINT, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+            },
+            body: payload.toString(),
+            keepalive: true,
+          });
+          window.location.assign(THANK_YOU_PAGE);
+        } catch (error) {
+          formSubmitting = false;
+          submitBtn.disabled = false;
+          submitBtn.textContent = "ऑर्डर के लिए संपर्क करें";
+          loading?.classList.remove("show");
+          alert(
+            "डेटा भेजा नहीं जा सका। कृपया internet connection जाँचकर दोबारा प्रयास करें।",
+          );
+        }
+        return false;
+      }
+      window.submitForm = submitForm;
+      const contents = {
+        privacy: `<div class="pp-mtitle"><i class="ti ti-shield-lock" aria-hidden="true"></i>Privacy Policy</div><div class="pp-mbadge">Last updated: June 2025</div><p class="pp-mpara">GathHeal आपकी personal information की सुरक्षा को सर्वोच्च प्राथमिकता देता है। जब आप order करते हैं तो हम निम्नलिखित जानकारी एकत्र करते हैं:</p><ul class="pp-mlist"><li>नाम, मोबाइल नंबर और delivery address</li><li>Payment details (encrypted और secure)</li><li>Order history और purchase records</li></ul><div class="pp-mhl">आपकी जानकारी किसी third-party को नहीं बेची जाती। इसका उपयोग केवल order processing और delivery के लिए किया जाता है।</div><p class="pp-mpara">हम industry-standard SSL encryption का उपयोग करते हैं। किसी भी privacy concern के लिए हमसे contact करें।</p>`,
+        terms: `<div class="pp-mtitle"><i class="ti ti-file-description" aria-hidden="true"></i>Terms & Conditions</div><div class="pp-mbadge">Please read carefully</div><p class="pp-mpara">GathHeal का उपयोग करके आप इन terms से सहमत होते हैं:</p><ul class="pp-mlist"><li>Product results व्यक्ति-दर-व्यक्ति अलग हो सकते हैं</li><li>यह product किसी बीमारी का इलाज नहीं है — wellness supplement है</li><li>18 वर्ष से कम आयु के व्यक्ति बिना guardian consent के order न करें</li><li>Fake/fraudulent orders के लिए legal action लिया जा सकता है</li><li>Product images केवल representation के लिए हैं</li></ul><div class="pp-mhl">GathHeal किसी भी समय बिना prior notice के prices, offers या terms बदलने का अधिकार रखता है।</div>`,
+        shipping: `<div class="pp-mtitle"><i class="ti ti-truck-delivery" aria-hidden="true"></i>Shipping Policy</div><div class="pp-mbadge">Free Delivery All India</div><p class="pp-mpara">हम पूरे India में FREE shipping प्रदान करते हैं। Delivery timeline:</p><ul class="pp-mlist"><li>Metro cities (Delhi, Mumbai, Bengaluru): 3–5 business days</li><li>Tier-2 / Tier-3 cities: 5–7 business days</li><li>Remote / rural areas: 7–10 business days</li></ul><div class="pp-mhl">Order confirm होने के 24–48 घंटे के अंदर tracking number SMS/WhatsApp पर भेजा जाएगा।</div><ul class="pp-mlist"><li>Delivery attempt 3 बार की जाएगी — उसके बाद order वापस आ जाएगा</li><li>Incorrect address की जिम्मेदारी customer की होगी</li></ul>`,
+        cancel: `<div class="pp-mtitle"><i class="ti ti-refresh" aria-hidden="true"></i>Cancellation Policy</div><div class="pp-mbadge">7-Day Easy Return</div><p class="pp-mpara">आप order confirm होने के <strong>24 घंटे के अंदर</strong> cancellation request कर सकते हैं।</p><ul class="pp-mlist"><li>Order dispatch होने के बाद cancellation संभव नहीं</li><li>Damaged या wrong product मिलने पर 7 दिन के अंदर complaint करें</li><li>Opened/used products return नहीं किए जाएंगे</li><li>Refund 5–7 business days में original payment method पर</li></ul><div class="pp-mhl">Return के लिए product original packaging में होना ज़रूरी है। Unboxing video होने पर claim जल्दी process होता है।</div>`,
+        contact: `<div class="pp-mtitle"><i class="ti ti-headset" aria-hidden="true"></i>Contact Us</div><p class="pp-mpara">हमारी team आपकी मदद के लिए Available है — सोमवार से शनिवार, सुबह 9 बजे से शाम 6 बजे तक।</p><div class="pp-cgrid"><div class="pp-citem"><i class="ti ti-phone" aria-hidden="true"></i><div class="pp-clbl">Call / WhatsApp</div><div class="pp-cval">+91 8860606078</div></div><div class="pp-citem"><i class="ti ti-mail" aria-hidden="true"></i><div class="pp-clbl">Email</div><div class="pp-cval">support@ssherbalindia.com</div></div><div class="pp-citem"><i class="ti ti-clock" aria-hidden="true"></i><div class="pp-clbl">Support Hours</div><div class="pp-cval">Mon–Sat 9am–6pm</div></div><div class="pp-citem"><i class="ti ti-message-circle" aria-hidden="true"></i><div class="pp-clbl">Response Time</div><div class="pp-cval">Within 24 hours</div></div></div>`,
+        disclaimer: `<div class="pp-mtitle"><i class="ti ti-alert-circle" aria-hidden="true"></i>Legal Disclaimer</div><div class="pp-mbadge">Important Notice</div><p class="pp-mpara">GathHeal एक natural wellness supplement है। इस product के बारे में निम्नलिखित बातें ध्यान में रखें:</p><ul class="pp-mlist"><li>यह product किसी भी बीमारी का diagnosis, treatment, cure या prevention नहीं करता</li><li>Results individual to individual अलग हो सकते हैं</li><li>यह product FSSAI guidelines के अनुसार एक food supplement है, drug नहीं</li><li>किसी भी medical condition में उपयोग से पहले doctor से परामर्श करें</li><li>Pregnant, nursing women या किसी chronic illness वाले व्यक्ति पहले physician से consult करें</li></ul><div class="pp-mhl">Website पर दिए गए statements को Food & Drug Administration द्वारा evaluate नहीं किया गया है। यह product किसी disease को diagnose, treat, cure या prevent करने के लिए नहीं है।</div><p class="pp-mpara">Product की images, descriptions और testimonials केवल illustrative purpose के लिए हैं। GathHeal किसी भी indirect या consequential loss के लिए उत्तरदायी नहीं है।</p>`,
+      };
+      // Policy modal does not modify body/html positioning or overflow.
+      // The fixed overlay itself blocks background interaction, so the page never reflows or shakes.
+      function lockPage() {}
+      function unlockPage() {}
+      function openModal(k) {
+        if (!contents[k]) return;
+        $("#pp-content").innerHTML = contents[k];
+        lockPage();
+        $("#pp-overlay").classList.add("show");
+        $("#pp-modal").scrollTo(0, 0);
+      }
+      function closeModal() {
+        if (!$("#pp-overlay").classList.contains("show")) return;
+        $("#pp-overlay").classList.remove("show");
+        unlockPage();
+      }
+      function closeIfOutside(e) {
+        if (e.target === $("#pp-overlay")) closeModal();
+      }
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
+      });
+      $("#pp-overlay").addEventListener(
+        "wheel",
+        (e) => {
+          if (!$("#pp-modal").contains(e.target)) e.preventDefault();
+        },
+        { passive: false },
+      );
+      $("#pp-overlay").addEventListener(
+        "touchmove",
+        (e) => {
+          if (!$("#pp-modal").contains(e.target)) e.preventDefault();
+        },
+        { passive: false },
+      );
+
+      window.openModal = openModal;
+      window.closeModal = closeModal;
+      window.closeIfOutside = closeIfOutside;
+    </script>
+  </body>
+</html>
