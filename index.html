@@ -682,34 +682,44 @@
       }
       .discount-sticker {
         position: absolute;
-        top: 8px;
-        right: 4px;
+        top: 2px;
+        right: -12px;
+        z-index: 1;
+        isolation: isolate;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 84px;
-        height: 84px;
-        border: 3px solid #fff0b3;
-        border-radius: 50%;
-        background: linear-gradient(145deg, #fff3ad, #ffc849 55%, #f39a21);
-        color: #501b13;
-        box-shadow: 0 0 0 4px #fbbf2433, 0 8px 20px #0006;
-        transform: rotate(12deg);
-        animation: discount-pulse 3s ease-in-out infinite;
+        width: 100px;
+        height: 100px;
+        color: #521a0b;
+        filter: drop-shadow(0 5px 0 #aa5819) drop-shadow(0 10px 12px #0008);
+        transform: rotate(10deg);
+        animation: discount-pulse 3.6s ease-in-out infinite;
       }
       .discount-sticker::before {
         content: "";
         position: absolute;
-        inset: 4px;
-        border: 1px dashed #8a431b80;
-        border-radius: inherit;
+        inset: 0;
+        z-index: -2;
+        background: linear-gradient(135deg, #fff8c4 5%, #ffdb67 35%, #ffb52c 65%, #ffe997 90%);
+        clip-path: polygon(50% 0%, 59% 9%, 71% 5%, 75% 18%, 89% 18%, 89% 32%, 100% 39%, 94% 50%, 100% 61%, 89% 68%, 89% 82%, 75% 82%, 71% 95%, 59% 91%, 50% 100%, 41% 91%, 29% 95%, 25% 82%, 11% 82%, 11% 68%, 0% 61%, 6% 50%, 0% 39%, 11% 32%, 11% 18%, 25% 18%, 29% 5%, 41% 9%);
       }
-      .discount-sticker strong { font-size: 27px; line-height: 1.1; font-weight: 900; }
-      .discount-sticker span { font-size: 13px; line-height: 1.4; font-weight: 800; letter-spacing: 2px; }
+      .discount-sticker::after {
+        content: "";
+        position: absolute;
+        inset: 12px;
+        z-index: -1;
+        border: 1px solid #a9542566;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 3px #fff3be70;
+        background: linear-gradient(135deg, #ffffff70, transparent 48%);
+      }
+      .discount-sticker strong { font-size: 32px; line-height: 1.1; font-weight: 900; letter-spacing: -1.5px; text-shadow: 0 1px #fff5c9; }
+      .discount-sticker span { margin-top: 3px; padding: 2px 9px; border-radius: 4px; background: #681e14; color: #fff1b6; font-size: 12px; line-height: 1.2; font-weight: 800; letter-spacing: 2px; }
       @keyframes discount-pulse {
-        0%, 100% { transform: rotate(12deg) scale(1); }
-        50% { transform: rotate(8deg) scale(1.06); }
+        0%, 100% { transform: translateY(0) rotate(10deg) scale(1); }
+        50% { transform: translateY(-4px) rotate(6deg) scale(1.04); }
       }
       @keyframes capsule-float {
         0%, 100% { transform: translateY(0); }
@@ -1485,14 +1495,14 @@
         <h2>
           <span class="accent">गांठ में बदलाव हो तो</span>
         </h2>
-        <div class="final-cta-showcase">
-          <img class="final-cta-product" src="images/capsuleproduct.png" alt="GathHeal Capsules product bottle" width="1254" height="1254" loading="lazy" decoding="async" />
-          <div class="discount-sticker" aria-label="10% off"><strong>10%</strong><span>OFF</span></div>
-        </div>
         <p class="intro">
           सही जानकारी और qualified healthcare professional की सलाह से अगला कदम
           तय करें।
         </p>
+        <div class="final-cta-showcase">
+          <img class="final-cta-product" src="images/capsuleproduct.png" alt="GathHeal Capsules product bottle" width="1254" height="1254" loading="lazy" decoding="async" />
+          <div class="discount-sticker" aria-label="10% off"><strong>10%</strong><span>OFF</span></div>
+        </div>
         <h3>GathHeal Capsules</h3>
         <small>Ayurvedic Herbal Wellness Formula</small
         ><a class="cta" href="#order-form"
